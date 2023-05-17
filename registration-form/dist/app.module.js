@@ -10,12 +10,14 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const user_module_1 = require("./user/user.module");
+const dotenv = require("dotenv");
+dotenv.config();
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            mongoose_1.MongooseModule.forRoot('mongodb+srv://sandy_varanasi:sRzKkk5zN4u6uAZG@sandy-clusture.eimj9vg.mongodb.net/nest-form'),
+            mongoose_1.MongooseModule.forRoot(process.env.MONGO_URI),
             user_module_1.UserModule,
         ],
     })

@@ -1,14 +1,16 @@
-// app.module.ts
-
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://sandy_varanasi:sRzKkk5zN4u6uAZG@sandy-clusture.eimj9vg.mongodb.net/nest-form'),
-    UserModule,
+    MongooseModule.forRoot(process.env.MONGO_URI),
+    UserModule,    
   ],
+  
 })
 export class AppModule {}
 
