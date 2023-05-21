@@ -21,7 +21,19 @@ export default function Homepage() {
 
   return (
     <Fragment>
-      <h1 className="heading">Donate For Good</h1>
+      <div className="heading-container">
+        <h1 className="heading">Donate For Good</h1>
+        <div className="description">
+          <p>Support our relief efforts for those affected by the devastating floods.
+             Your donation will provide essential supplies and assistance to those in need.
+             Every contribution counts! Join us in supporting the flood victims and helping them recover from this natural disaster.
+             Your donation will ensure that affected families receive immediate relief, including food, water, shelter, and medical aid.
+             Together, we can help rebuild lives and communities affected by the floods.
+             Your support will make a lasting impact on the recovery process.
+             Visit our website or contact us to make a donation and offer hope to those affected by the floods.
+             Your generosity can bring relief and restore hope in their time of need.</p>
+        </div>
+      </div>
       <div>
         {data.map((element) => (
           <div key={element.id} className="card">
@@ -40,3 +52,4 @@ export default function Homepage() {
     </Fragment>
   );
 }
+
