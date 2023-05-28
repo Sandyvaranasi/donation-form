@@ -1,6 +1,5 @@
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Homepage from "../components/homepage";
+import Homepage from '../components/Homepage';
 import Donate from "../components/Donate";
 
 function App() {
